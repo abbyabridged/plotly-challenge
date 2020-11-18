@@ -1,12 +1,12 @@
 // Read in the data
-d3.json("../data/samples.json").then((data)=> {
+d3.json("data/samples.json").then((data)=> {
     console.log(data);
 });
 
 // Create a function for the info box
 function buildInfo(id) {
     // Read in the data
-    d3.json("../data/samples.json").then((data)=> {
+    d3.json("data/samples.json").then((data)=> {
         
         // Get the metadata for the info box
         var metadata = data.metadata;
@@ -32,7 +32,7 @@ function buildInfo(id) {
 
 function buildPlot(id) {
     // Read in the data
-    d3.json("../data/samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
         console.log(data)
 
         // Filter the sample data by subject ID
@@ -116,7 +116,7 @@ function init() {
     var dropdown = d3.select("#selDataset");
 
     // Read in the data
-    d3.json("../data/samples.json").then((data)=> {
+    d3.json("data/samples.json").then((data)=> {
         // console.log(data)
 
         // Get the ID for the dropdown
