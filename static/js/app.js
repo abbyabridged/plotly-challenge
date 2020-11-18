@@ -61,10 +61,31 @@ function buildPlot(id) {
             orientation: "h",
         };
 
-        var data = [trace];
+        var data_bar = [trace];
         
         // Create the bar chart
-        Plotly.newPlot("bar", data);
+        Plotly.newPlot("bar", data_bar);
+
+
+        ////// BUBBLE CHART ////////
+
+        // Create the trace for the bubble chart
+        var trace1 = {
+            x: samples.otu_ids,
+            y: samples.sample_values,
+            mode: "markers",
+            marker: {
+                size: samples.sample_values,
+                color: samples.otu_ids
+            },
+            text: samples.otu_labels
+  
+        };
+  
+        var data_bubble = [trace1];
+  
+        // Create the bubble chart
+        Plotly.newPlot("bubble", data_bubble) 
 
     });
 }
