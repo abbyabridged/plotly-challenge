@@ -59,6 +59,14 @@ function buildPlot(id) {
             type:"bar",
             text: labels,
             orientation: "h",
+            marker: {
+                color: 'rgb(61,162,213)',
+                opacity: 0.6,
+                line: {
+                  color: 'rgb(217,237,247)',
+                  width: 1.5
+                }
+              }
         };
 
         var data_bar = [trace];
@@ -76,16 +84,22 @@ function buildPlot(id) {
             mode: "markers",
             marker: {
                 size: samples.sample_values,
-                color: samples.otu_ids
+                color: samples.otu_ids,
             },
             text: samples.otu_labels
-  
         };
   
         var data_bubble = [trace1];
-  
+
+        var layout = {
+        xaxis: {
+            title: {
+              text: 'OTU ID'}
+            }
+        };
+
         // Create the bubble chart
-        Plotly.newPlot("bubble", data_bubble) 
+        Plotly.newPlot("bubble", data_bubble, layout) 
 
     });
 }
