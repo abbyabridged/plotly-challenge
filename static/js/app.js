@@ -23,7 +23,7 @@ function buildInfo(id) {
 
         // Get the data and add to info box
         Object.entries(subject_info).forEach((key) => {   
-                info.append("panel-body").text(key[0] + ": " + key[1] + "\n");    
+                info.append("h5").text(key[0] + ": " + key[1] + "\n");    
         });
     });
 }
