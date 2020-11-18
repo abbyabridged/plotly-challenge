@@ -61,7 +61,7 @@ function buildPlot(id) {
             orientation: "h",
             marker: {
                 color: 'rgb(61,162,213)',
-                opacity: 0.6,
+                opacity: 0.9,
                 line: {
                   color: 'rgb(217,237,247)',
                   width: 1.5
